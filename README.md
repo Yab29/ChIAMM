@@ -76,7 +76,7 @@ For intra- and inter-chromosomal interactions, we need to run the ChIAMM.R separ
 ### Result file
 We will get the result file names out_significant_interaction.txt. 
 
-|chrom1|start1|	end1|	chrom2|	start2|	end2|	ipet|	W_1i|
+|chrom1|start1|	end1|	chrom2|	start2|	end2|	ipet|	W1i|
 |------|------|------|-----|-------|------|------|-----|
 |chr1|	919077|	919880|	chr1|	998944|	999920|	4|	0.59|
 |chr1	|919648|	920151|	chr1|	1219377|	1220316|	2|	0.51|
@@ -90,7 +90,7 @@ We will get the result file names out_significant_interaction.txt.
 - **start2:** The start coordinates of cluster anchor 2
 - **end2:** The end coordinate of cluster anchor 2
 - **ipet:** Number of PETs between cluster anchor 1 and cluster anchor 2
-- **W_1i :** The probability of pair 𝑖 being a true pair
+- **W1i :** The probability of pair 𝑖 being a true pair
 
 
 
