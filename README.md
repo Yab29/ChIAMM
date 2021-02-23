@@ -18,8 +18,8 @@ Call the variables tag count within anchor 1 and tag count within anchor 2 as ta
 #### 2) Self-ligation PETS
 Using the out.spet file in the ChIA-PET Tool V3 output, we can compute the self-ligation PETs of anchors using the commands as follows:  
 > 1) &nbsp; awk '{if($2<$5){print $1"\t"$2"\t"$5}else{print $1"\t"$5"\t"$2}}' out.spet  > out.spet.bed3 <br />
-> 2) &nbsp; bedtools coverage -a Anchor1.bed -b out.spet.bed3 > self1.bed <br />
-> 2) &nbsp; bedtools coverage -a Anchor2.bed -b out.spet.bed3 > self2.bed <br />
+> 2) &nbsp; bedtools coverage -a Anchor1.bed -b out.spet.bed3| cut -f4 > self1.bed <br />
+> 2) &nbsp; bedtools coverage -a Anchor2.bed -b out.spet.bed3| cut -f4 > self2.bed <br />
 > 2) &nbsp; then compute the average of it and call the variable name “selfAvg”  <br />
 
 #### 3) Mappability 
