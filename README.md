@@ -24,9 +24,9 @@ Using the out.spet file in the ChIA-PET Tool V3 output, we can compute the self-
 
 #### 3) Mappability 
 Download the mappability score for human genome version hg19 using http://genome-asia.ucsc.edu/cgi-bin/hgFileUi?db=hg19&g=wgEncodeMapability. The file is in bigWig format, and we need to convert it to .bed format using bigWigToWig and BEDOPS wig2bed. Then, find the overlap region between .bed file and Anchor regions using Bedtools map. 
-> 1) &nbsp; bedtools map -a Anchor1.bed -b mappability.bed -c 5 -o mean > mappability1.bed <br />
-> 2) &nbsp; bedtools map -a Anchor2.bed -b mappability.bed -c 5 -o mean > mappability2.bed <br />
-> 3) &nbsp; Compute the average of 5th column in mappability1.bed and mappability2.bed, and call the variable name “mappaAvg” <br />
+> 1) &nbsp; bedtools map -a Anchor1.bed -b mappability.bed -c 5 -o mean| cut -f4 > mappability1.bed <br />
+> 2) &nbsp; bedtools map -a Anchor2.bed -b mappability.bed -c 5 -o mean| cut -f4 > mappability2.bed <br />
+> 3) &nbsp; Compute the average of mappability1.bed and mappability2.bed, and call the variable name “mappaAvg” <br />
 > 4) &nbsp; If you don’t find the mappability in the above link, you can prepare by yourself using ngs-tools.  <br />
 - Example for rice RS1 reference genome we can find like
   - sh mappability.sh -i mhRS63.fa -l 35 -p mappability > mappability.bed 
@@ -43,12 +43,7 @@ We need to organize the input file for inter- and intra-chromosomal interaction 
    |chrom1 |start1|end1  |chrom2 |start2 |end2  |ipet  |distance|tagcou1 |tagcou2  |tagcouAvg |selfAvg|gcAv  |mappaAvg|
    |-------|-------|------|-----|-------|------|------|--------|--------|---------|----------|-------|------|--------|
    |chr1	  |840068 |840732|chr1 |855579|	856565|	2    |15672   |	3|	6|	4.5|	9.0|	0.66|	0.69|
-   |chr1   |913753 |914300|chr1 |1199808|1200630|2    |286192	|46	|33|	39.5|	3.0|	0.60|	0.51|
-   |chr1	  |919077	|919880|chr1 |998944 |999920|	4    |79953|	30|	13|	21.5|	35.0|	0.66|	0.51|
-   |chr1	  |919648	|920151|chr1 |1219377|1220316|	2  |299947|	56|	10|	33.0|	22.5|	0.62|	0.32|
-   |chr1	  |968089	|969098|chr1 |998105 |999837|6     |30377|	27|	6	|16.5|	34.5|	0.70|	0.63|
-   |chr1	  |994350	|995077|chr1 |1003901|1004606|2    |9540|	26|	25|	25.5|	21.0|	0.74|	0.78|
-
+   
 ### Test data sets
 > 1) &nbsp;	RNAPII ChIA-PET data from human MCF7:<br /> https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM832458 and https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM832459
 > 2) &nbsp;	RNAPII ChIA-PET data from human K562:<br /> https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM832464 and https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM832465 
@@ -79,9 +74,6 @@ We will get the result file names out_significant_interaction.txt.
 |chrom1|start1|	end1|	chrom2|	start2|	end2|	ipet|	W1i|
 |------|------|------|-----|-------|------|------|-----|
 |chr1|	919077|	919880|	chr1|	998944|	999920|	4|	0.59|
-|chr1	|919648|	920151|	chr1|	1219377|	1220316|	2|	0.51|
-|chr1|	968089|	969098|	chr1|	998105|	999837|	6|	0.73|
-|chr1	|994350|	995077|	chr1|	1003901|	1004606|	2	|0.53|
 
 - **chrom1:** The name of the chromosome on which the cluster anchor 1 exists
 - **start1:** The start coordinates of cluster anchor 1
