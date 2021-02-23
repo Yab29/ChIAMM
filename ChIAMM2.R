@@ -1,4 +1,3 @@
-##g++ version need 4.9 or upper when install rstan package
 ##recommend use new version of R
 ##if you meet some problem about libxml-2.0.pc when install xml2 package, you need to find out the folder which include libxml-2.0.pc and add the path of this folder in variable "PKG_CONFIG_PATH"
 library(getopt)
