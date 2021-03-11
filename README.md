@@ -32,9 +32,9 @@ Download the mappability score for human genome version hg19 using http://genome
 
 #### 4) GC content 
 The GC content of anchors are computed using bedtools nuc <br />
-> 1) &nbsp;	bedtools nuc -fi  hg19.fa -bed  Anchor1.bed  > gc1.bed <br />
-> 2) &nbsp;	bedtools nuc -fi  hg19.fa -bed  Anchor2.bed  > gc2.bed <br />
-> 3) &nbsp; Compute the average of 5th column in the gc1.bed and gc2.bed and call variable name “gcAv” <br />
+> 1) &nbsp;	bedtools nuc -fi  hg19.fa -bed  Anchor1.bed| cut -f5  > gc1.bed <br />
+> 2) &nbsp;	bedtools nuc -fi  hg19.fa -bed  Anchor2.bed| cut -f5  > gc2.bed <br />
+> 3) &nbsp; Compute the average of gc1.bed and gc2.bed and call variable name “gcAv” <br />
 
 ### Input files
 We need to organize the input file for inter- and intra-chromosomal interaction data separately. As an example, the input file of intra-chromosomal interactions should have such kind of variables arrangement.   
