@@ -83,5 +83,5 @@ We will get the result file names out_significant_interaction.txt.
 - **ipet:** Number of PETs between cluster anchor 1 and cluster anchor 2
 - **W1i :** The probability of pair 𝑖 being a true pair
 
-### &nbsp;CopyRight &#169; 2021 [Guoliang's Lab](http://guolianglab.org/subpages/REASERACH/publications.php), All Rights Reserved
+##### &nbsp;CopyRight &#169; 2021 [Guoliang's Lab](http://guolianglab.org/subpages/REASERACH/publications.php), All Rights Reserved
 
