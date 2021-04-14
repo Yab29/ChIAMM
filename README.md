@@ -85,5 +85,5 @@ We will get the result file names out_significant_interaction.txt.
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-#### &nbsp;CopyRight &#169; 2020 [Guoliang's Lab](http://guolianglab.org/subpages/REASERACH/publications.php), All Rights Reserved
+#### &nbsp;CopyRight &#169; 2020 [Guoliang's Lab](http://glab.hzau.edu.cn/index.php), All Rights Reserved
 
