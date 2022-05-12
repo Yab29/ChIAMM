@@ -1,7 +1,7 @@
 ## **ChIAMM**
 ## Introduction
 **Ch**romatin **I**nteraction **A**nalysis with **P**aired-**E**nd **T**ag (**ChIA-PET**) sequencing is a technology to study genome-wide long-range chromatin interactions bound by protein factors. **ChIAMM** is a statistical technique design for detecting significant chromatin interactions from the ChIA-PET experiments data using the Mixture model. 
-#### &nbsp;Orginal Paper&#169; 2020 [ChIAMM](https://www.frontiersin.org/articles/10.3389/fgene.2020.616160/full)
+#### &nbsp;Read Full Research Paper&#169; [ChIAMM](https://www.frontiersin.org/articles/10.3389/fgene.2020.616160/full)
 ### The ChIAMM requires the following dependencies:
 > 1) &nbsp; R (≥3.4.0) <br />
 > 2) &nbsp; StanHeaders (≥ 2.18.1)<br />
